@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand"><i class="fa-solid fa-graduation-cap"></i> StudyFlow</div>
+        <p class="menu-label">MENU</p>
+
+        <nav>
+            <a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+            <a class="nav-link" href="tasks.html"><i class="fa-solid fa-list-check"></i> My Tasks</a>
+            <a class="nav-link" href="create-task.html"><i class="fa-solid fa-circle-plus"></i> Create Task</a>
+            <a class="nav-link" href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">S</div>
+                <div><strong>Student</strong><small>My Workspace</small></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+                <h1>Dashboard</h1>
+            </div>
+            <button class="theme-btn" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <span class="banner-tag">YOUR DAILY OVERVIEW</span>
+                <h2>Make today count.</h2>
+                <p>Organize your work, stay focused and achieve your goals.</p>
+                <a href="create-task.html" class="banner-btn">Create New Task <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="banner-icon"><i class="fa-solid fa-rocket"></i></div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple"><i class="fa-solid fa-layer-group"></i></div>
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+                <small>All your tasks</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange"><i class="fa-solid fa-clock"></i></div>
+                <p>Pending Tasks</p>
+                <h2 id="pendingTasks">0</h2>
+                <small>Waiting to be done</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green"><i class="fa-solid fa-circle-check"></i></div>
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+                <small>Successfully finished</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon blue"><i class="fa-solid fa-chart-line"></i></div>
+                <p>Completion Rate</p>
+                <h2 id="completionRate">0%</h2>
+                <small>Overall performance</small>
+            </div>
+        </section>
+
+        <section class="content-card progress-card">
+            <div class="section-heading">
+                <div><h3>Overall Progress</h3><p>Keep moving towards your goals.</p></div>
+                <span class="progress-number" id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <p class="progress-message" id="progressMessage">Start adding tasks to track your progress.</p>
+        </section>
+
+        <section class="content-card">
+            <div class="section-heading">
+                <div><h3>Recent Tasks</h3><p>Your latest activities</p></div>
+                <a href="tasks.html" class="text-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div id="recentTasks" class="task-list">
+                <p class="empty-state">Loading your tasks...</p>
+            </div>
+        </section>
+
+        <footer>© 2026 StudyFlow. Stay organized, stay productive.</footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

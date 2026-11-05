@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow | My Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand"><i class="fa-solid fa-graduation-cap"></i> StudyFlow</div>
+        <p class="menu-label">MENU</p>
+        <nav>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+            <a class="nav-link active" href="tasks.html"><i class="fa-solid fa-list-check"></i> My Tasks</a>
+            <a class="nav-link" href="create-task.html"><i class="fa-solid fa-circle-plus"></i> Create Task</a>
+            <a class="nav-link" href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <div class="profile"><div class="avatar">S</div><div><strong>Student</strong><small>My Workspace</small></div></div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div><p class="eyebrow">STAY ORGANIZED</p><h1>My Tasks</h1></div>
+            <button class="theme-btn" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+        </header>
+
+        <section class="page-intro">
+            <div><h2>All your tasks, in one place.</h2><p>Manage your assignments and keep track of your work.</p></div>
+            <a href="create-task.html" class="primary-btn"><i class="fa-solid fa-plus"></i> Add New Task</a>
+        </section>
+
+        <section class="content-card">
+            <div class="task-toolbar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search tasks...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <div id="message" class="message"></div>
+            <div id="taskList" class="task-list">
+                <p class="empty-state">Loading tasks...</p>
+            </div>
+        </section>
+
+        <footer>© 2026 StudyFlow. Stay organized, stay productive.</footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

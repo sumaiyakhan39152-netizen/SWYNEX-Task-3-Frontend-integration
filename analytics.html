@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow | Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand"><i class="fa-solid fa-graduation-cap"></i> StudyFlow</div>
+        <p class="menu-label">MENU</p>
+        <nav>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+            <a class="nav-link" href="tasks.html"><i class="fa-solid fa-list-check"></i> My Tasks</a>
+            <a class="nav-link" href="create-task.html"><i class="fa-solid fa-circle-plus"></i> Create Task</a>
+            <a class="nav-link active" href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <div class="profile"><div class="avatar">S</div><div><strong>Student</strong><small>My Workspace</small></div></div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div><p class="eyebrow">YOUR PERFORMANCE</p><h1>Analytics</h1></div>
+            <button class="theme-btn" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+        </header>
+
+        <section class="page-intro">
+            <div><h2>See how far you've come.</h2><p>Understand your task progress and subject-wise activity.</p></div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple"><i class="fa-solid fa-layer-group"></i></div>
+                <p>Total Tasks</p><h2 id="totalTasks">0</h2><small>Tasks created</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange"><i class="fa-solid fa-hourglass-half"></i></div>
+                <p>Pending</p><h2 id="pendingTasks">0</h2><small>Still in progress</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green"><i class="fa-solid fa-check-double"></i></div>
+                <p>Completed</p><h2 id="completedTasks">0</h2><small>Tasks finished</small>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon blue"><i class="fa-solid fa-chart-line"></i></div>
+                <p>Success Rate</p><h2 id="completionRate">0%</h2><small>Completion percentage</small>
+            </div>
+        </section>
+
+        <section class="content-card progress-card">
+            <div class="section-heading">
+                <div><h3>Overall Completion</h3><p>Your current productivity level</p></div>
+                <span class="progress-number" id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <p class="progress-message" id="progressMessage">Your progress will appear here.</p>
+        </section>
+
+        <section class="content-card">
+            <div class="section-heading">
+                <div><h3>Subject-wise Activity</h3><p>Tasks grouped by subject or category</p></div>
+            </div>
+            <div id="subjectSummary" class="subject-summary">
+                <p class="empty-state">Loading analytics...</p>
+            </div>
+        </section>
+
+        <footer>© 2026 StudyFlow. Stay organized, stay productive.</footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
